@@ -1,0 +1,77 @@
+﻿@model mulakat.Models.odio_detay
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_LayoutPageSablon.cshtml";
+}
+
+<div class="container">
+
+    <form action="/Home/Ekle" method="post" enctype="multipart/form-data">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="TARIH">Tahlih/Tetkik Tarihi:</label><br />
+                    <input type="datetime" name="TARIH" size="15" value="@(DateTime.Now)" />
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="KANAAT">Kanaat:</label>
+                    <textarea class="form-control" rows="5" name="KANAAT"></textarea>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="comment">Sonuç:</label>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th></th>
+                                <th>250 Hz</th>
+                                <th>500 Hz</th>
+                                <th>1 kHz</th>
+                                <th>2 kHz</th>
+                                <th>3 kHz</th>
+                                <th>4 kHz</th>
+                                <th>6 kHz</th>
+                                <th>8 kHz</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sol Kulak</td>
+                                <td><input name="sagIKIYUZELLI" type="text" style="width:75px;" /></td>
+                                <td><input name="sagBESYUZ" type="text" style="width:75px;" /></td>
+                                <td><input name="sagBIR" type="text" style="width:75px;" /></td>
+                                <td><input name="sagIKI" type="text" style="width:75px;" /></td>
+                                <td><input name="sagUC" type="text" style="width:75px;" /></td>
+                                <td><input name="sagDORT" type="text" style="width:75px;" /></td>
+                                <td><input name="sagALTI" type="text" style="width:75px;" /></td>
+                                <td><input name="sagSEKIZ" type="text" style="width:75px;" /></td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Sağ Kulak</td>
+                                <td><input name="solIKIYUZELLI" type="text" style="width:75px;" /></td>
+                                <td><input name="solBESYUZ" type="text" style="width:75px;" /></td>
+                                <td><input name="solBIR" type="text" style="width:75px;" /></td>
+                                <td><input name="solIKI" type="text" style="width:75px;" /></td>
+                                <td><input name="solUC" type="text" style="width:75px;" /></td>
+                                <td><input name="solDORT" type="text" style="width:75px;" /></td>
+                                <td><input name="SolALTI" type="text" style="width:75px;" /></td>
+                                <td><input name="SolSEKİZ" type="text" style="width:75px;" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </li>
+        </ul>
+        <input id="kaydet" type="submit" data value="Ekle" />
+    </form>
+
+
+
+</div>
+

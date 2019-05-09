@@ -1,0 +1,82 @@
+﻿@using mulakat.Models;
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_LayoutPageSablon.cshtml";
+}
+
+<div class="container">
+
+    <h2>Odyometri</h2>
+    <form action="/Home/Detay" method="post" enctype="multipart/form-data">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="TARIH">Tahlih/Tetkik Tarihi:</label><br />
+                    <input type="datetime" name="TARIH" size="15" value="@ViewBag.Kayit.TARIH" />
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="KANAAT">Kanaat:</label>
+                    <textarea class="form-control" rows="5" name="KANAAT">@ViewBag.Kayit.KANAAT</textarea>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="comment">Sonuç:</label>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th></th>
+                                <th>250 Hz</th>
+                                <th>500 Hz</th>
+                                <th>1 kHz</th>
+                                <th>2 kHz</th>
+                                <th>3 kHz</th>
+                                <th>4 kHz</th>
+                                <th>6 kHz</th>
+                                <th>8 kHz</th>
+                                <th>SSO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sağ Kulak</td>
+                                <td><input name="sagIKIYUZELLI" type="text" style="width:75px;" value="@ViewBag.Kayit.sagIKIYUZELLI" /></td>
+                                <td><input name="sagBESYUZ" type="text" style="width:75px;" value="@ViewBag.Kayit.sagBESYUZ" /></td>
+                                <td><input name="sagBIR" type="text" style="width:75px;" value="@ViewBag.Kayit.sagBIR" /></td>
+                                <td><input name="sagIKI" type="text" style="width:75px;" value="@ViewBag.Kayit.sagIKI" /></td>
+                                <td><input name="sagUC" type="text" style="width:75px;" value="@ViewBag.Kayit.sagUC" /></td>
+                                <td><input name="sagDORT" type="text" style="width:75px;" value="@ViewBag.Kayit.sagDORT" /></td>
+                                <td><input name="sagALTI" type="text" style="width:75px;" value="@ViewBag.Kayit.sagALTI" /></td>
+                                <td><input name="sagSEKIZ" type="text" style="width:75px;" value="@ViewBag.Kayit.sagSEKIZ" /></td>
+                                <td>SSo</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Sol Kulak</td>
+                                <td><input name="solIKIYUZELLI" type="text" style="width:75px;" value="@ViewBag.Kayit.solIKIYUZELLI" /></td>
+                                <td><input name="solBESYUZ" type="text" style="width:75px;" value="@ViewBag.Kayit.solBESYUZ" /></td>
+                                <td><input name="solBIR" type="text" style="width:75px;" value="@ViewBag.Kayit.solBIR" /></td>
+                                <td><input name="solIKI" type="text" style="width:75px;" value="@ViewBag.Kayit.solIKI" /></td>
+                                <td><input name="solUC" type="text" style="width:75px;" value="@ViewBag.Kayit.solUC" /></td>
+                                <td><input name="solDORT" type="text" style="width:75px;" value="@ViewBag.Kayit.solDORT" /></td>
+                                <td><input name="SolALTI" type="text" style="width:75px;" value="@ViewBag.Kayit.SolALTI" /></td>
+                                <td><input name="SolSEKİZ" type="text" style="width:75px;" value="@ViewBag.Kayit.SolSEKİZ" /></td>
+                                <td>SSo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+        </ul><div class="nav navbar-nav navbar-right">
+            <input name="ID" type="text" style="visibility:hidden" value="@ViewBag.Kayit.ID" />
+            <button class="btn btn-default">Kaydet</button>
+        </div>
+    </form>
+    <button class="btn btn-danger" onclick="window.location.href = '/Home/Listele'">İptal</button>
+</div>
+
+
+

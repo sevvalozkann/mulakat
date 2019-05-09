@@ -1,0 +1,43 @@
+﻿@using mulakat.Models;
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_LayoutPageSablon.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <h2>Odyometri</h2>
+        <input type="checkbox" /><label>Tümünü Seç</label>
+        @foreach (odio_detay item in ViewBag.liste)
+        {
+            <ul class="list-group list-group-flush" style="height:50px;">
+                <li class="list-group-item" style="height:50px;">
+                    <div class="form-group">
+                        <div class="col col-sm-1">
+                            <form method="post" style="width:20%">
+                                <input type="checkbox" />
+                                <input name="id" style="visibility:hidden;width:20%" value="@item.ID" />
+                            </form>
+                        </div>
+                        <div class="col col-sm-8">
+                            <label>Odyometri (@item.TARIH)</label>
+                        </div>
+                        <div class="col col-sm-3">
+                            <div class="nav navbar-nav navbar-left">
+                                <a class="btn btn-default" href="@Url.Action("Detay", "Home", new { id= item.ID })">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+
+                            </div><div class="nav navbar-nav navbar-right">
+                                <form method="post" style="width:20%">
+                                    <button class="btn btn-danger silmeislemi">Sil</button>
+                                    <input name="id" type="text" style="visibility:hidden" value="@item.ID" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        }
+    </div>
+
+</div>

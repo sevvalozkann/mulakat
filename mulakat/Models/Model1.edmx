@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="mulakattModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="odio_detay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KANAAT" Type="nvarchar" MaxLength="255" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="sagIKIYUZELLI" Type="float" />
+          <Property Name="sagBESYUZ" Type="float" />
+          <Property Name="sagBIR" Type="float" />
+          <Property Name="sagIKI" Type="float" />
+          <Property Name="sagUC" Type="float" />
+          <Property Name="sagDORT" Type="float" />
+          <Property Name="sagALTI" Type="float" />
+          <Property Name="sagSEKIZ" Type="float" />
+          <Property Name="solIKIYUZELLI" Type="float" />
+          <Property Name="solBESYUZ" Type="float" />
+          <Property Name="solBIR" Type="float" />
+          <Property Name="solIKI" Type="float" />
+          <Property Name="solUC" Type="float" />
+          <Property Name="solDORT" Type="float" />
+          <Property Name="SolALTI" Type="float" />
+          <Property Name="SolSEKİZ" Type="float" />
+        </EntityType>
+        <EntityContainer Name="mulakattModelStoreContainer">
+          <EntitySet Name="odio_detay" EntityType="Self.odio_detay" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mulakattModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="odio_detay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KANAAT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="sagIKIYUZELLI" Type="Double" />
+          <Property Name="sagBESYUZ" Type="Double" />
+          <Property Name="sagBIR" Type="Double" />
+          <Property Name="sagIKI" Type="Double" />
+          <Property Name="sagUC" Type="Double" />
+          <Property Name="sagDORT" Type="Double" />
+          <Property Name="sagALTI" Type="Double" />
+          <Property Name="sagSEKIZ" Type="Double" />
+          <Property Name="solIKIYUZELLI" Type="Double" />
+          <Property Name="solBESYUZ" Type="Double" />
+          <Property Name="solBIR" Type="Double" />
+          <Property Name="solIKI" Type="Double" />
+          <Property Name="solUC" Type="Double" />
+          <Property Name="solDORT" Type="Double" />
+          <Property Name="SolALTI" Type="Double" />
+          <Property Name="SolSEKİZ" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="mulakattEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="odio_detay" EntityType="Self.odio_detay" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mulakattModelStoreContainer" CdmEntityContainer="mulakattEntities1">
+          <EntitySetMapping Name="odio_detay">
+            <EntityTypeMapping TypeName="mulakattModel.odio_detay">
+              <MappingFragment StoreEntitySet="odio_detay">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KANAAT" ColumnName="KANAAT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="sagIKIYUZELLI" ColumnName="sagIKIYUZELLI" />
+                <ScalarProperty Name="sagBESYUZ" ColumnName="sagBESYUZ" />
+                <ScalarProperty Name="sagBIR" ColumnName="sagBIR" />
+                <ScalarProperty Name="sagIKI" ColumnName="sagIKI" />
+                <ScalarProperty Name="sagUC" ColumnName="sagUC" />
+                <ScalarProperty Name="sagDORT" ColumnName="sagDORT" />
+                <ScalarProperty Name="sagALTI" ColumnName="sagALTI" />
+                <ScalarProperty Name="sagSEKIZ" ColumnName="sagSEKIZ" />
+                <ScalarProperty Name="solIKIYUZELLI" ColumnName="solIKIYUZELLI" />
+                <ScalarProperty Name="solBESYUZ" ColumnName="solBESYUZ" />
+                <ScalarProperty Name="solBIR" ColumnName="solBIR" />
+                <ScalarProperty Name="solIKI" ColumnName="solIKI" />
+                <ScalarProperty Name="solUC" ColumnName="solUC" />
+                <ScalarProperty Name="solDORT" ColumnName="solDORT" />
+                <ScalarProperty Name="SolALTI" ColumnName="SolALTI" />
+                <ScalarProperty Name="SolSEKİZ" ColumnName="SolSEKİZ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
